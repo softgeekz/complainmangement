@@ -1,6 +1,6 @@
 <?php include_once("header.php");?>
 			<div class="content">
-				<h1> Complain Management System</h1>
+				<h1 class="text-center"> Complain Management System</h1>
 				
 				
 				
@@ -30,7 +30,7 @@
 					</form>
 				</div>	
 				
-				<div class="cleared">======== </div>
+				<div class="cleared"> </div>
 				
 				
 			</div>	

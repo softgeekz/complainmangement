@@ -12,10 +12,15 @@
 			<div id="top">
 				<h1 class="text-center"> Company Name </h1>
 			</div>
-			<div id="navigaion">
+			
+			<div class="logo" style="float: left">
+			   <a href="index.php" style="background: transparent"> <img src="images/logo.png" width="140px;">  </a>
+			</div>
+			
+			<div id="navigaion" style="width: 80%;float: right;">
 				 <div class="navbar">
 				
-				  <a href="#home">  Logo  </a>
+				
 				  <a href="index.php">Home</a>
 			
 				  <div class="dropdown">
