@@ -9,3 +9,7 @@ For Localhost:
 3. Create a Database (databasename: complain) by PHPmyadmin 
 4. Import Database.sql file into database
 5. Edit the config file if need 
+
+AdminLogin:
+username: admin
+password: 123456
