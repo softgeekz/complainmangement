@@ -14,6 +14,55 @@
   text-align: center;
 }
 
+.sidebar{
+	width: 25%;
+	border: 1px solid gray;
+	margin-top: 20px;
+	float: left;
+	position: relative;
+}
+
+.right_content{
+	width: 64%;
+	border: 1px solid gray;
+	margin-top: 20px;
+	margin-left: 20px;
+	float: left;
+	position: relative;
+	padding: 10px;
+	
+}
+
+ul li{
+	list-style-type: none;
+	padding-left: 0;
+}
+
+ul{
+	padding-left: 0;
+}
+
+ul.sidenav li{
+	border: 1px solid blue;
+	padding: 6px;
+	margin: 4px;
+	display: block;
+	position: relative;
+	background: green;
+
+}
+
+ul.sidenav li:hover{
+	background: red;
+
+}
+
+ul.sidenav li a{
+	padding: 6px;
+	color: #fff;
+	text-decoration: none;
+}
+
 .login_form{
 		width: 50%;
 		margin: 20px auto;

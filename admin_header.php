@@ -18,6 +18,6 @@
 				  <a href="#home">  Logo  </a>
 				  <a href="index.php">Home</a>
 
-				   <a href="#home" style="float: right">  <i class="fas fa-power-off"></i> Logout</a>
+				   <a href="logout.php" style="float: right">  <i class="fas fa-power-off"></i> Logout</a>
 				</div>
 			</div>
