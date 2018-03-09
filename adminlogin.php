@@ -39,7 +39,7 @@ if(isset($_POST['submit'])){
 				<h1> Admin Login </h1>
 				
 				
-				<div class="login_form">
+				<div class="login_form cleared">
 				<?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
 				<?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
 

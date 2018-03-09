@@ -25,7 +25,7 @@
 					<div class="dropdown-content">
 					  <a href="profile.php">Profile</a>
 					  <a href="management.php">Mangement</a>
-					  <a href="diretor.php">Directors</a>
+					  <a href="director.php">Directors</a>
 					</div>
 				  </div> 
 				  
@@ -41,7 +41,7 @@
 					</div>
 				  </div>
 				  
-				   <a href="#home">Contact</a>
+				   <a href="contact.php">Contact</a>
 
 				    <div class="dropdown">
 					<button class="dropbtn">Login
