@@ -17,33 +17,7 @@
 				
 				  <a href="#home">  Logo  </a>
 				  <a href="index.php">Home</a>
-			
-				  <div class="dropdown">
-					<button class="dropbtn">Company 
-					  <i class="fa fa-caret-down"></i>
-					</button>
-					<div class="dropdown-content">
-					  <a href="profile.php">Profile</a>
-					  <a href="management.php">Mangement</a>
-					  <a href="diretor.php">Directors</a>
-					</div>
-				  </div> 
-				  
-				   <div class="dropdown">
-					<button class="dropbtn">Department 
-					  <i class="fa fa-caret-down"></i>
-					</button>
-					<div class="dropdown-content">
-					  <a href="websolution.php">Web Solution</a>
-					  <a href="network.php">Network</a>
-					  <a href="store.php">Store</a>
-					  <a href="sales.php">Sales</a>
-					</div>
-				  </div>
-				  
-				   <a href="#home" style="float: right">  <i class="fas fa-power-off"></i> Logout</a>
 
-				   
-				  
+				   <a href="#home" style="float: right">  <i class="fas fa-power-off"></i> Logout</a>
 				</div>
 			</div>

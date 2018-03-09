@@ -11,18 +11,16 @@ include_once("config/function.php");
 
 ?>
 
-			<div class="content">
-					<div class="sidebar">
-						<ul>
-							<li> </li>
-							<li> </li>
-							<li> </li>
-							<li> </li>
-							<li> </li>
-						</ul>
-					</div>
-				
-			</div>	
+	<div class="content">
+		<div class="sidebar">
+			<ul>
+				<li> <a href=""> Dashboard </a> </li>
+				<li> <a href=""> Change Pass </a>  </li>
+				<li> <a href=""> Submit Complain </a>  </li>
+				<li> <a href=""> Complain History </a>  </li>
+			</ul>
+		</div>		
+	</div>	
 			
 
 
