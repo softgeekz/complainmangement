@@ -16,12 +16,14 @@
 	}
  }
  
- 
- function dataarray($connection,$sql){
-	 $query = mysqli_query($connection,"SELECT * FROM  employee");
+ // query korar function
+ function dataquery($connection,$sql){
+	 $query = mysqli_query($connection,$sql);
 	 
 	 if(mysqli_num_rows($query)){
-		return  $row= mysqli_fetch_array($query,MYSQLI_ASSOC);
+		return  $query; 
+	 }else{
+		 return false;
 	 } 
  }
 

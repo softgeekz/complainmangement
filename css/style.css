@@ -1,14 +1,13 @@
 .wrapper{
 	width: 90%;
 	margin: auto;
-	
-	border: 1px solid gray;
+
     padding: 10px;
 }
 
 .content{
 	clear: both;
-	min-height: 400px;
+	min-height: 500px;
 }
 
 .footer {
@@ -19,11 +18,12 @@
     padding: 1rem;
     /* background-color: #efefef; */
     text-align: center;
+	
 }
 
 .sidebar{
 	width: 25%;
-	border: 1px solid gray;
+
 	margin-top: 20px;
 	float: left;
 	position: relative;
@@ -31,7 +31,7 @@
 
 .right_content{
 	width: 64%;
-	border: 1px solid gray;
+
 	margin-top: 20px;
 	margin-left: 20px;
 	float: left;
@@ -131,10 +131,83 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
+select  {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
 
 .text-center{
 	text-align: center;
 }
+
+
+
+
+/* table design */
+
+.table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table td, .table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table tr:nth-child(even){background-color: #f2f2f2;}
+
+.table tr:hover {background-color: #ddd;}
+
+.table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button_d{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+.form_box{
+	width: 70%;
+	margin: auto;
+	border: 1px solid gray;
+	padding: 20px;
+	
+}
+
+label{
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* navigation  */
