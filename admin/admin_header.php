@@ -36,7 +36,7 @@ include_once("../config/config.php");
 session_start();
 //Jodi form submit kora hoy 
 include_once("../config/function.php");
-if (islogin()!=true){
+if (isloginAdmin()!=true){
 	header('Location: ../index.php');
 }
 //pd($_SESSION);

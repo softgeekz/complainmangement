@@ -25,7 +25,7 @@
 					<tbody>
 					<?php
 								// dataquery 	
-						$query = dataquery($connection,"SELECT * FROM employee");
+						$query = dataquery($connection,"SELECT `employee`.*,`dept`.dept_name FROM `employee` LEFT JOIN `dept` ON `dept`.id=`employee`.dept");
 						
 						if($query){
 							while($row = mysqli_fetch_array($query,MYSQLI_ASSOC)){	
@@ -34,7 +34,7 @@
 							<td> <?php echo $row['emoplyee_name']; ?></td>  
 							<td> <?php echo $row['username']; ?> </td>
 							<td> <?php echo $row['password']; ?> </td> 	
-							<td> <?php echo $row['dept']; ?> </td> 	
+							<td> <?php echo $row['dept_name']; ?> </td> 	
 							<td> <?php echo date("Y-M-d",$row['updatetime']); ?> </td> 
 						</tr>
 					<?php }

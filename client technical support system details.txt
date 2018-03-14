@@ -1,0 +1,27 @@
+user:
+
+1.after login user can see his details
+2.user can change passward
+3.user can submit complains
+4.user can see his total submitted complains
+
+
+
+admin:
+
+1.after login admin can see a graphical chart of unsolved problems according to the department
+2.admin can change passward
+3.admin can see all the complain, admin will select a complain and click assign, then the complain will be assigned to employees of that department
+4.admin can search complains by date,username,department
+
+
+
+employee:
+
+1.emlpoyee can see his total solved and pending complains
+2.employee can change passward
+3.employee can see the list of assigned complains , employee will click to the action button the selected complain will be open with complain details, no, username. 
+4.employee will solved the problem ,if necessary a file will be attatched and select status . if status is selected processing then the complain can be update afterwards. but if it is selected solved and close the problem can't be change and a email will be sent to the user email address.
+
+
+
