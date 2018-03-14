@@ -34,13 +34,15 @@ function flashmsg(){
  function dataquery($connection,$sql){
 	 $query = mysqli_query($connection,$sql);
 	 
-	 if(mysqli_num_rows($query)){
+	 if($query){
 		return  $query; 
 	 }else{
 		 return false;
 	 } 
  }
  
+ 
+ // Data insert kora
  function insertQuery($connection,$sql){
 	 $query = mysqli_query($connection,$sql);
 	 
@@ -49,6 +51,19 @@ function flashmsg(){
 	 }else{
 		 return false;
 	 }
+ }
+ 
+ 
+ // Row gula count kora
+ function countrows($connection,$sql){
+	 $query = mysqli_query($connection,$sql);
+	
+	if($query){
+		 return$rowcount=mysqli_num_rows($query);
+	 }else{
+		 return false;
+	 }
+	 
  }
 
 ?>
