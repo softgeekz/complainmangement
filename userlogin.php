@@ -33,10 +33,10 @@ if(isset($_POST['submit'])){
 	//3.1.4 if the user is logged in Greets the user with message
 	if (isset($_SESSION['username'])){
 		$username = $_SESSION['username'];
-		//header('Location: user/userpanel.php');
+		header('Location: user/userpanel.php');
 	}else{
 		$_SESSION['flash_unsuccess'] = 'Wrong Credentials';
-		//header('Location: userlogin.php');
+		header('Location: userlogin.php');
 	}
 }else{	
 ?>
@@ -72,7 +72,7 @@ if(isset($_POST['submit'])){
 					<center>
 							<h2> Not Registered? </h2>
 					
-							<a href="" class="button_d"> Click Here </a>
+							<a href="usersignup.php" class="button_d"> Click Here </a>
 					</center>
 				</div>
 				
