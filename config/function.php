@@ -52,7 +52,9 @@ function flashmsg(){
 		 return false;
 	 }
  }
- 
+
+// Data Update 
+
  
  // Row gula count kora
  function countrows($connection,$sql){

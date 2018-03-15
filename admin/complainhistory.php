@@ -29,6 +29,7 @@
 						$query = dataquery($connection,"SELECT `complain`.*,`dept`.dept_name,`dept`.dept_name,`users`.full_name,`users`.username FROM `complain` 
 														LEFT JOIN `dept` ON `dept`.id=`complain`.department_id
 														LEFT JOIN `users` ON `users`.id=`complain`.complainby_userid
+														WHERE `complain`.flag=1
 														");
 														
 						//pd(mysqli_fetch_array($query,MYSQLI_ASSOC));
@@ -46,7 +47,7 @@
 							<td> <?php echo $row['dept_name']; ?> </td> 
 							<td> <?php echo $row['full_name']; ?> </td>
 							<td> <?php echo date("Y-m-d",$row['updatetime']); ?> </td>
-							<td><?php  $flag = $row['flag']; if($flag==0){ echo "Unsolved";}else{ echo "Solved";}?> </th>
+							<td><?php  $status = $row['status']; if($status==0){ echo "Unsolved";}elseif($status==1){ echo "Solved";}?> </th>
 						</tr>
 					<?php }
 						}
