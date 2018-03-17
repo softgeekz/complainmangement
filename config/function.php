@@ -20,15 +20,8 @@ function flashmsg(){
 	}
 } 
  
+
  
- // Admin Login kore ase kina test kora
- function isloginAdmin(){
-	if($_SESSION['username']=='admin'){
-		return true;
-	}else{
-		return false;
-	}
- }
  
  // query korar function
  function dataquery($connection,$sql){

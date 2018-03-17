@@ -84,6 +84,11 @@ if(isset($_POST['submit'])){
 							</div>
 							
 							<div class="input_group">
+								<label> Profile Photo </label>
+								<input type="password" name="password" placeholder="Contact Number" required>
+							</div>
+							
+							<div class="input_group">
 								<input type="submit" name="submit" class="button_green text-center right_side">
 							</div>
 						</fieldset>

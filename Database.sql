@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 14, 2018 at 05:40 AM
+-- Generation Time: Mar 17, 2018 at 10:12 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -53,13 +53,34 @@ CREATE TABLE `complain` (
   `id` int(11) NOT NULL,
   `complainby_userid` int(11) NOT NULL,
   `department_id` int(5) NOT NULL,
+  `type` varchar(200) NOT NULL,
   `assignedto_employeeid` int(5) NOT NULL,
   `complain_date` varchar(15) NOT NULL,
-  `complain_description` int(11) NOT NULL,
+  `complain_description` text NOT NULL,
+  `photo` text NOT NULL,
+  `solution` text NOT NULL,
   `status` int(1) NOT NULL,
   `updatetime` int(11) NOT NULL,
+  `solvedtime` int(11) NOT NULL,
   `flag` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `complain`
+--
+
+INSERT INTO `complain` (`id`, `complainby_userid`, `department_id`, `type`, `assignedto_employeeid`, `complain_date`, `complain_description`, `photo`, `solution`, `status`, `updatetime`, `solvedtime`, `flag`) VALUES
+(1, 3, 2, 'aasdf', 0, '1521176470', ' asdf', '', '', 0, 1521176470, 0, 1),
+(2, 3, 2, 'aasdf', 0, '1521176470', ' asdf', '', '', 0, 1521176470, 0, 1),
+(3, 3, 2, 'aasdf', 0, '1521176503', ' asdf', '', '', 0, 1521176503, 0, 1),
+(4, 3, 2, 'asdf', 0, '1521319140', ' asdf', '', '', 0, 1521319140, 0, 1),
+(5, 3, 2, 'asdf', 0, '1521319177', ' asdf', '', '', 0, 1521319177, 0, 1),
+(6, 3, 2, 'sdfasdf', 0, '1521319263', ' asdf', '', '', 0, 1521319263, 0, 1),
+(7, 3, 2, 'asdf', 0, '1521319289', ' asdf', '', '', 0, 1521319289, 0, 1),
+(8, 3, 2, 'asdf', 0, '1521319662', ' asdf', '', '', 0, 1521319662, 0, 1),
+(9, 3, 2, 'asdf', 0, '1521319676', ' asdf', '', '', 0, 1521319676, 0, 1),
+(10, 3, 2, 'asdf', 0, '1521319715', ' asdf', '', '', 0, 1521319715, 0, 1),
+(11, 3, 2, 'asdf', 0, '1521319986', ' asdf', 'executiveinn1.jpg', '', 0, 1521319986, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -106,7 +127,8 @@ CREATE TABLE `employee` (
 INSERT INTO `employee` (`id`, `emoplyee_name`, `username`, `password`, `dept`, `updatetime`, `flag`) VALUES
 (1, 'Mr. Guddu MIa', 'guddu', '123456', 1, 1514965494, '1'),
 (2, 'Mr. Monni Akther', 'monni', '123456', 1, 1514965494, '1'),
-(6, 'Marina Duarte', 'marina', '123456', 2, 1521002265, '0');
+(6, 'Marina Duarte', 'marina', '123456', 2, 1521002265, '0'),
+(7, 'Shirin', 'marina', '123456', 3, 1521002265, '0');
 
 -- --------------------------------------------------------
 
@@ -118,10 +140,23 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `full_name` varchar(50) NOT NULL,
   `username` varchar(50) NOT NULL,
+  `company_name` varchar(100) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `contactno` varchar(50) NOT NULL,
+  `address` text NOT NULL,
   `password` varchar(32) NOT NULL,
   `updatetime` int(11) NOT NULL,
   `flag` enum('0','1') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `full_name`, `username`, `company_name`, `email`, `contactno`, `address`, `password`, `updatetime`, `flag`) VALUES
+(1, 'Jessica Jhumu', '12345', '', '', '', '', '654321', 1514965494, '1'),
+(2, 'Tarique Mosharraf', 'tariq ', 'Tariq Company', 'tariq4478@gmail.com', '01837664478 ', 'uttara dhaka', '654321', 1521145100, '1'),
+(3, 'Monni akterq', 'monni ', 'Monni and SOngs', 'minerpoint@gmail.com', '01837664478 ', 'Uttara DHaka', '123456', 1521145143, '1');
 
 --
 -- Indexes for dumped tables
@@ -171,7 +206,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `complain`
 --
 ALTER TABLE `complain`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `dept`
@@ -183,13 +218,13 @@ ALTER TABLE `dept`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

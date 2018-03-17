@@ -10,7 +10,7 @@ include_once("config/function.php");
 
 if(isset($_POST['submit'])){
 	// PD() ekta userdefine function ja function.php file e banano hoise //
-	pd($_POST);
+
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
@@ -21,16 +21,18 @@ if(isset($_POST['submit'])){
 
 	if ($count == 1){
 		$_SESSION['username'] = $username;
+		$_SESSION['logintype'] = "admin";
 	}else{
 		$fmsg = "Invalid Login Credentials.";
 	}
 	
 	//3.1.4 if the user is logged in Greets the user with message
-	if (isset($_SESSION['username'])){
+	if ($_SESSION['logintype']=="admin"){
 		$username = $_SESSION['username'];
 		header('Location: admin/admin.php');
 	}else{
-		echo "Wrong Login";
+		$_SESSION['flash_unsuccess'] = 'Wrong Credentials';
+		header('Location: admin/admin.php');
 	}
 }else{	
 ?>

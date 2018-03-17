@@ -26,12 +26,13 @@ if(isset($_POST['submit'])){
 	if ($count == 1){
 		$_SESSION['username'] = $userpin;
 		$_SESSION['userid'] = $userid ;
+		$_SESSION['logintype'] = "user";
 	}else{
 		$fmsg = "Invalid Login Credentials.";
 	}
 	
 	//3.1.4 if the user is logged in Greets the user with message
-	if (isset($_SESSION['username'])){
+	if ($_SESSION['logintype'] == "user"){
 		$username = $_SESSION['username'];
 		header('Location: user/userpanel.php');
 	}else{

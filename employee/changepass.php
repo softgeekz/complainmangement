@@ -1,4 +1,4 @@
-<?php include_once("user_header.php");?>
+<?php include_once("admin_header.php");?>
 
 
 <?php 
@@ -6,13 +6,13 @@
 
 if(isset($_POST['submit'])){
 	
-	$userid = $_SESSION['userid'];
+	
 	$current_password = $_POST['current_password'];
 	$password = $_POST['password'];
 	
 	$time = time(); // Now unix time
 	
-	 $sql = "UPDATE `users` SET `password`='$password' WHERE `id`='$userid'";
+	 $sql = "UPDATE `admin` SET `password`='$password'";
 	
 	$query = mysqli_query($connection,$sql); // $connection variable ta config.php file e ase r insertQuery() method/function ta function.php file e ase jar kaj dta insert kore mysql er id column er data return kora 
 	
@@ -52,12 +52,7 @@ if(isset($_POST['submit'])){
 			
 							<div class="form-group">
 								<label> New Password </label>
-								<input type="text" name="password" min="5" id="password" required>
-							</div>
-							
-							<div class="form-group">
-								<label> Confirm Password </label>
-								<input type="text" name="password" min="5" id="password_confirm" oninput="check(this)" required>
+								<input type="text" name="password" min="5" required>
 							</div>
 							
 							
@@ -71,17 +66,7 @@ if(isset($_POST['submit'])){
 				</div>
 		</div>	
 	</div>	
-	
-<script language='javascript' type='text/javascript'>
-    function check(input) {
-        if (input.value != document.getElementById('password').value) {
-            input.setCustomValidity('Password Must be Matching.');
-        } else {
-            // input is valid -- reset the error message
-            input.setCustomValidity('');
-        }
-    }
-</script>
+
 
 		
 <?php include_once("../footer.php");?>	

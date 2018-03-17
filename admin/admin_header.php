@@ -36,8 +36,12 @@ include_once("../config/config.php");
 session_start();
 //Jodi form submit kora hoy 
 include_once("../config/function.php");
-if (isloginAdmin()!=true){
-	header('Location: ../index.php');
-}
+
+
+
+	if ($_SESSION['logintype'] != "admin"){
+		header('Location: ../index.php');
+		$_SESSION['flash_unsuccess'] = 'Not login';
+	}
 //pd($_SESSION);
 ?>			

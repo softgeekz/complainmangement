@@ -1,6 +1,3 @@
-<?php 
-session_start();
-?>
 <html>
 	<head>
 		<title> Complian Mangement</title>
@@ -26,8 +23,8 @@ session_start();
 				
 				  <a href="#home">  Logo  </a>
 				  <a href="index.php">Home</a>
-					
-				  <a href="../logout.php" style="float: right">  <?php echo "Username : ".$_SESSION['username'];?> <i class="fas fa-power-off"></i> Logout</a>
+
+				   <a href="../logout.php" style="float: right">  <i class="fas fa-power-off"></i> Logout</a>
 				</div>
 			</div>
 			
@@ -36,13 +33,14 @@ session_start();
 include_once("../config/config.php");
 ?>
 <?php
+session_start();
 //Jodi form submit kora hoy 
 include_once("../config/function.php");
 
 
-
-	if ($_SESSION['logintype'] != "user"){
+	if ($_SESSION['logintype'] != "employee"){
 		header('Location: ../index.php');
 		$_SESSION['flash_unsuccess'] = 'Not login';
 	}
+//pd($_SESSION);
 ?>			
