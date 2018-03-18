@@ -19,8 +19,12 @@ if(isset($_POST['submit'])){
 	$result = mysqli_query($connection, $query) or die(mysqli_error($connection));
 	$count = mysqli_num_rows($result);
 
+	$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+	
 	if ($count > 0){
+		$_SESSION['userid'] = $row['id'];
 		$_SESSION['username'] = $username;
+		$_SESSION['department'] = $row['dept'];
 		$_SESSION['logintype'] = "employee";
 	}else{
 		$fmsg = "Invalid Login Credentials.";
@@ -39,6 +43,7 @@ if(isset($_POST['submit'])){
 
 			<div class="content">
 				<h1> Admin Login </h1>
+				
 					<?php flashmsg(); ?>
 				
 				<div class="login_form cleared">

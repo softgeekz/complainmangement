@@ -8,6 +8,7 @@
 			
 							
 				<p style="margin-top: 20px; ">
+				<?php echo $_SESSION['department'];?>
 					<hr>
 				</p>
 				

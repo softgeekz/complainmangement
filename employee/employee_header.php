@@ -42,5 +42,12 @@ include_once("../config/function.php");
 		header('Location: ../index.php');
 		$_SESSION['flash_unsuccess'] = 'Not login';
 	}
+	
+	
+// Employee Info
+
+	
+	
+	
 //pd($_SESSION);
 ?>			
