@@ -19,7 +19,7 @@ if(isset($_POST['submit'])){
 	$result = mysqli_query($connection, $query) or die(mysqli_error($connection));
 	$count = mysqli_num_rows($result);
 
-	if ($count == 1){
+	if ($count > 0){
 		$_SESSION['username'] = $username;
 		$_SESSION['logintype'] = "employee";
 	}else{

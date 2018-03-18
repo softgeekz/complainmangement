@@ -6,42 +6,22 @@
 
 		<div class="right_content">
 			
-				<a href="addemployee.php" class="button_d"> Add Employee </a>
-				
+							
 				<p style="margin-top: 20px; ">
 					<hr>
 				</p>
 				
 				<table class="table">
-					<thead>
-						<tr>
-							<th> Employee Name</th>  
-							<th> Username </th>
-							<th> Password </th> 	
-							<th> Department </th> 	
-							<th> Joining </th> 	
-						</tr>
-					</thead>
-					<tbody>
-					<?php
-								// dataquery 	
-						$query = dataquery($connection,"SELECT `employee`.*,`dept`.dept_name FROM `employee` LEFT JOIN `dept` ON `dept`.id=`employee`.dept");
-						
-						if($query){
-							while($row = mysqli_fetch_array($query,MYSQLI_ASSOC)){	
-							?>
-						<tr>
-							<td> <?php echo $row['emoplyee_name']; ?></td>  
-							<td> <?php echo $row['username']; ?> </td>
-							<td> <?php echo $row['password']; ?> </td> 	
-							<td> <?php echo $row['dept_name']; ?> </td> 	
-							<td> <?php echo date("Y-M-d",$row['updatetime']); ?> </td> 
-						</tr>
-					<?php }
-						}
-					?>	
-					</tbody>
+					<tr> 
+						<td> Total Solved </td>  <td>0  </td>
+					</tr>
+					<tr> 
+						<td> Total Pending </td>  <td> 0 </td>
+					</tr>
+				
 				</table>
+				
+				
 		</div>	
 	</div>	
 			
