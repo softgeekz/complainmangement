@@ -24,10 +24,10 @@
 
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Unsolved'],
-          ['Web',     11],
-          ['Network',      2],
-          ['Sales',  2],
-          ['Store', 2]
+          ['Web',     <?php echo countrows($connection,"SELECT `id` FROM `complain` WHERE `department_id`='1'");?> ],
+          ['Network',      <?php echo countrows($connection,"SELECT `id` FROM `complain` WHERE `department_id`='2'");?> ],
+          ['Sales',    <?php echo countrows($connection,"SELECT `id` FROM `complain` WHERE `department_id`='3'");?>],
+          ['Store',   <?php echo countrows($connection,"SELECT `id` FROM `complain` WHERE `department_id`='4'");?>]
         ]);
 
         var options = {

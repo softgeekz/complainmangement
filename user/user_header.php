@@ -11,27 +11,6 @@ session_start();
 	
 	
 	<body>
-		<div class="wrapper">
-			<div id="top">
-				<h1 class="text-center"> Company Name </h1>
-			</div>
-			
-			<div class="logo" style="float: left">
-			   <a href="index.php" style="background: transparent"> <img src="../images/logo.png" width="140px;">  </a>
-			</div>
-			
-			<div id="navigaion" style="width: 80%;float: right;">
-			
-				 <div class="navbar">
-				
-				  <a href="#home">  Logo  </a>
-				  <a href="index.php">Home</a>
-					
-				  <a href="../logout.php" style="float: right">  <?php echo "Username : ".$_SESSION['username'];?> <i class="fas fa-power-off"></i> Logout</a>
-				</div>
-			</div>
-			
-			
 <?php 
 include_once("../config/config.php");
 ?>
@@ -45,4 +24,29 @@ include_once("../config/function.php");
 		header('Location: ../index.php');
 		$_SESSION['flash_unsuccess'] = 'Not login';
 	}
-?>			
+?>		
+		<div class="wrapper">
+			<div id="top">
+				<h1 class="text-center"> Company Name </h1>
+			</div>
+			
+			<div class="logo" style="float: left">
+			   <a href="index.php" style="background: transparent"> <img src="../images/logo.png" width="140px;">  </a>
+			</div>
+			
+			<div id="navigaion" style="width: 80%;float: right;">
+			
+			<?php 
+				$userid =  $_SESSION['userid'];								// dataquery 	
+				$query = dataquery($connection,"SELECT `users`.* FROM `users` WHERE `id`='$userid'");		
+				$row = mysqli_fetch_array($query,MYSQLI_ASSOC);
+				
+			?>
+			
+				 <div class="navbar">					
+				  <a href="../logout.php" style="float: right">  <img src="userprofilephoto/<?php echo $row['photo'];?>" width="50px;"><?php echo "<br/>".$_SESSION['username'];?> <i class="fas fa-power-off"></i> Logout </a>
+				</div>
+			</div>
+			
+			
+		

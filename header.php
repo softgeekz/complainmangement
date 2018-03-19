@@ -17,7 +17,9 @@
 			   <a href="index.php" style="background: transparent"> <img src="images/logo.png" width="140px;">  </a>
 			</div>
 			
-			<div id="navigaion" style="width: 80%;float: right;">
+			<div id="navigaion" style="    float: right;
+    margin-left: 108px;
+    width: 69%;">
 				 <div class="navbar">
 				
 				

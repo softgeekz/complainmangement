@@ -1,8 +1,8 @@
 .wrapper{
-	width: 90%;
-	margin: auto;
-
+width: 90%;
+    margin: auto;
     padding: 10px;
+    border: 1px solid;
 }
 
 .content{
@@ -258,18 +258,17 @@ label{
 
 /* navigation  */
 .navbar {
-    overflow: hidden;
-    background-color: darkslategray;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar a {
     float: left;
     font-size: 16px;
-    color: white;
+    color: #000000;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+	border: 1px solid gray;
 	
 	
 }
@@ -277,13 +276,19 @@ label{
 .dropdown {
     float: left;
     overflow: hidden;
+		border: 1px solid gray;
+		color: #000000;
+}
+
+.dropdown a{
+	color: #000000;
 }
 
 .dropdown .dropbtn {
     font-size: 16px;    
     border: none;
     outline: none;
-    color: white;
+    color: #000000;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -292,6 +297,7 @@ label{
 
 .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: navy;
+	color: #fff;
 }
 
 .dropdown-content {

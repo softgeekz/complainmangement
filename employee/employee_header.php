@@ -20,9 +20,7 @@
 			<div id="navigaion" style="width: 80%;float: right;">
 			
 				 <div class="navbar">
-				
-				  <a href="#home">  Logo  </a>
-				  <a href="index.php">Home</a>
+			
 
 				   <a href="../logout.php" style="float: right">  <i class="fas fa-power-off"></i> Logout</a>
 				</div>
