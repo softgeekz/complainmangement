@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 19, 2018 at 02:15 PM
--- Server version: 10.1.24-MariaDB
--- PHP Version: 7.1.6
+-- Generation Time: Mar 19, 2018 at 09:16 PM
+-- Server version: 10.1.26-MariaDB
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -128,8 +128,7 @@ CREATE TABLE `employee` (
 INSERT INTO `employee` (`id`, `emoplyee_name`, `username`, `password`, `dept`, `updatetime`, `flag`) VALUES
 (1, 'Mr. Guddu MIa', 'guddu', '123456', 1, 1514965494, '1'),
 (2, 'Mr. Monni Akther', 'monni', '333', 1, 1514965494, '1'),
-(6, 'Marina Duarte', 'marina', '123456', 2, 1521002265, '0'),
-(7, 'Shirin', 'marina', '123456', 3, 1521002265, '0');
+(6, 'Marina Duarte', 'marina', '123456', 2, 1521002265, '0');
 
 -- --------------------------------------------------------
 
@@ -208,26 +207,31 @@ ALTER TABLE `users`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `complain`
 --
 ALTER TABLE `complain`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 --
 -- AUTO_INCREMENT for table `dept`
 --
 ALTER TABLE `dept`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
