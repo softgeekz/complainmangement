@@ -52,6 +52,11 @@ include_once("../config/function.php");
 	
 // Employee Info
 
+$id = $_SESSION['userid'];
+
+$employeeinfo = mysqli_query($connection,"SELECT `employee`.*,`dept`.dept_name FROM `employee` LEFT JOIN `dept` ON `dept`.id=`employee`.dept WHERE `employee`.id='$id'");
+	
+	
 	
 	
 	

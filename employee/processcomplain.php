@@ -38,7 +38,7 @@ if(isset($_POST['submit'])){
 					<hr>
 				</p>
 				
-				Complain Detail for Solution: 
+				<h3>Complain Detail for Solution:</h3> 
 				
 				<?php
 								// dataquery 	
@@ -53,9 +53,43 @@ if(isset($_POST['submit'])){
 											
 	
 					$row = mysqli_fetch_array($query,MYSQLI_ASSOC);
-					pd($row);
+					//pd($row);
+					
+					echo "Complain No : " . $row['id'];
+					echo "<br/>";
+				
+					echo "Complian by Username : " . $row['username'];
+					echo "<br/>";
+					echo "Complian Detail : " . $row['complain_description'];
 				
 				?>
+				<hr/>
+				
+				<form action="processcomplian.php" method="POST">
+					<div class="form-group">
+						<label> Solution </label> <br/>
+						<textarea name="solution" rows="4" cols="70" required> </textarea>
+					</div>
+				
+					<div class="form-group">
+						<label> Attach File </label>  <br/>
+						<input type="file" name="solutionfile" required>
+					</div>
+			
+					<div class="form-group">
+						<label> Status </label> <br/>
+						<select name="status" class="form-group" style="width: 70%">
+							<option value=""> Processing </option>
+						</select>
+					</div>
+					
+					
+					<div class="form-group">
+								<input type="submit" class="button_d" name="submit" style="">
+						</div>
+							
+				
+				</form>
 		</div>	
 	</div>	
 	

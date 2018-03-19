@@ -8,7 +8,9 @@
 			
 							
 				<p style="margin-top: 20px; ">
-				<?php echo $_SESSION['department'];?>
+				<?php $row = mysqli_fetch_array($employeeinfo,MYSQLI_ASSOC);
+					echo "Department : ".$row['dept_name'];
+				?>
 					<hr>
 				</p>
 				
