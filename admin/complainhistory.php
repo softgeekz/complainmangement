@@ -9,7 +9,7 @@
 					<hr>
 				</p>
 				
-				<table class="table">
+				<table class="table" id="myTable">
 					<thead>
 						<tr>
 							<th> Complain No.</th>  
@@ -62,3 +62,9 @@
 <?php include_once("../footer.php");?>	
 
 		
+<script>		
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+
+</script>

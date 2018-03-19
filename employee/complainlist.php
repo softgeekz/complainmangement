@@ -9,7 +9,7 @@
 					<hr>
 				</p>
 				
-				<table class="table">
+				<table class="table" id="myTable">
 					<thead>
 						<tr>
 							<th> Complain No.</th>  
@@ -49,7 +49,7 @@
 							<td> <?php echo $row['dept_name']; ?> </td> 
 							<td> <?php echo $row['full_name']; ?> </td>
 							<td> <?php echo date("Y-m-d",$row['updatetime']); ?> </td>
-							<td> <a href="processcomplain.php" class="small_button"> Process </a> </th>
+							<td> <a href="processcomplain.php?id=<?php echo $row['id'];?>" class="small_button"> Process </a> </th>
 						</tr>
 					<?php }
 						}
@@ -61,7 +61,12 @@
 		</div>	
 	</div>	
 			
+<script>		
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
 
+</script>
 		
 <?php include_once("../footer.php");?>	
 

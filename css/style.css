@@ -2,7 +2,7 @@
 width: 90%;
     margin: auto;
     padding: 10px;
-    border: 1px solid;
+
 }
 
 .content{
@@ -22,7 +22,7 @@ width: 90%;
 }
 
 .sidebar{
-	width: 25%;
+	width: 20%;
 
 	margin-top: 20px;
 	float: left;
@@ -30,7 +30,7 @@ width: 90%;
 }
 
 .right_content{
-	width: 64%;
+	width: 75%;
 
 	margin-top: 20px;
 	margin-left: 20px;
@@ -157,7 +157,7 @@ float: left;
 
 
 /* Full-width input fields */
-input[type=text], input[type=password], input[type=email] {
+input[type=text], input[type=password], input[type=email], input[type=search]  {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
